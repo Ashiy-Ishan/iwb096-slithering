@@ -1,0 +1,146 @@
+.Adminlogin_page{
+    position:relative;
+    margin-top: 7%;
+}
+
+
+
+
+/*============data entry table=============*/
+
+.main{
+    position:relative;
+    margin-top:2%;
+    margin-left:4%;
+    margin-right: auto;
+}
+
+.Inputs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    position: relative;
+    margin-bottom: 1rem;
+    }
+
+.Inputs div{
+     width: 20rem;
+}
+
+.Inputs input{
+    width: 100%;
+    height: 20px;
+    text-decoration: none;
+    text-align: center;
+    background-color: rgba(232, 229, 178, 0.64);
+}
+
+
+
+.sub a{
+    
+    text-decoration: none;
+    width: 6px;
+    color:rgb(224, 218, 218);
+}
+/*=========Gender==========*/
+
+.gender form{
+    gap: 1rem;
+    display: inline-flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+
+}
+
+/*==================table styling=================*/
+
+.data_entry_table table{
+    width: 80%;
+    border-collapse: collapse;
+    margin: 10px 0 0 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+
+}
+
+.data_entry_table tbody input[type="number"],
+.data_entry_table tbody input[type="text"],
+.data_entry_table tbody input[type="date"]{
+    width: 15rem;
+    height: 2rem;
+    text-align: center;
+    border-radius: 0.2rem;
+
+}
+
+.submit_button button[type="submit"] {
+    width: 50%;
+    height: 40px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;   /* Light gray background for odd rows */
+}
+
+tbody tr:hover {
+    background-color: #d1e7dd;   /* Light green on hover */
+}
+
+/*==========Processing progress==========*/
+.checkBox{
+    display: inline-flex;
+    gap: 5rem;
+    margin-top: 1rem;
+
+}
+.progressContainer{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.progressContainer form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2%;
+}
+
+.progressStage div{
+    margin-left: 20px;
+    width: 200px;
+}
+
+.progressStage {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+
+.progressContainer h3{
+    text-decoration: underline;
+}
+
+.submit_button button[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+

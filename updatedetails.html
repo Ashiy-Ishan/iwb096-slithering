@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styles/headerFooter.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/adminPage.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Panel</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="heade">
+            <dvi class="header_logo">
+                <div><img src="./img/BLS.png" alt="system_logo" /></div>
+                <div>
+                    <h3>Bank Loan Tracking System</h3>
+                </div>
+            </dvi>
+        </div>
+    </header>
+
+    <div class="Adminlogin_page">
+        <hr>
+        <hr>
+        <div class="topic main">
+            <h2>Welcome to Update Panel</h2>
+        </div>
+        <div class="main">
+            <div class="bank Inputs">
+                <div>
+                    <h3>Bank Account Number</h3>
+                </div>
+                <div>
+                    <form> <!--submit allert-->
+                        <label><input type="number" required id="nicSearch" placeholder="Enter Account Number"></label>
+
+                    </form>
+                </div>
+                <div class="sub"><button type="submit" style="margin-left: 2%; border-radius:5px; padding:0 6px "
+                        onclick="getBankDataByAcNum(); getBankOfficeDetails(); getBankPPDetails(); getBankHPDetails();">Search User</button>
+                </div>
+            </div>
+            <div class="name Inputs">
+                <div>
+                    <h3>Account Owner Name</h3>
+                </div>
+                <div>
+                    <form> <!--submit allert-->
+                        <label><input type="text" required id="nameShow" placeholder="Owner's Name" ></label>
+                    </form>
+                </div>
+            </div>
+            <div class="gender Inputs">
+                <div>
+                    <h3>Gender</h3>
+                </div>
+                <div>
+                    <form> <!--submit allert--> <!--This function not works for this type-->
+                        <label for="male">Male</label>
+                        <input type="radio" id="maleshow" required name="gender" value="1" >
+
+                        <label for="female">Female</label>
+                        <input type="radio" id="femaleshow" required name="gender" value="2" >
+
+                        <label for="other">Other</label>
+                        <input type="radio" id="othershow" required name="gender" value="3" >
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="data_entry_table Inputs main">
+            <form> <!--submit allert-->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NIC Number</th>
+                            <th>Loan Amount (Rs:)</th>
+                            <th>Loan ID</th>
+                            <th>Loan Placement Date</th>
+                            <th>Latest Status Update Date</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td><label>
+                                <input type="number" minlength="10" required placeholder=" NIC" id="nicShow" name="nic"
+                                   >
+                            </label></td>
+                        <td><label>
+                                <input type="text" minlength="20" required placeholder=" Enter Loan amount"
+                                    id="amountShow" name="amount" >
+                            </label></td>
+                        <td><label>
+                                <input type="text" minlength="10" required placeholder=" Loan ID" id="loanIDShow"
+                                    name="loanIDShow" disabled>
+                            </label></td>
+                        <td><label>
+                                <input type="date" minlength="10" required placeholder=" Place Date" id="p_dateShow"
+                                    name="p_dateShow" >
+                            </label></td>
+                        <td><label>
+                                <input type="date" minlength="10" required placeholder=" Updated Date" id="u_dateShow"
+                                    name="u_dateShow" >
+                            </label></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="processing main">
+            <div>
+                <h2>Loan Processing Progress ..</h2>
+            </div>
+            <hr>
+            <div class="checkBox">
+                <!--        bank branch-->
+
+                <div class="progressContainer" id="bankBranch">
+                    <form> <!--submit allert--><!--This function not works for this type-->
+                        <h3>Bank</h3>
+                        <div class="progressStage">
+                            <div>
+                                <label for="male">Credit Officer</label>
+                            </div>
+                            <label for="CreditOfficer"></label><input type="checkbox" id="CreditOfficerShow"
+                                name="CreditOffice" value="1" >
+                        </div>
+                        <div class="progressStage">
+                            <div>
+                                <label for="male">Bank Manager</label>
+                            </div>
+                            <input type="checkbox" id="BankManagerShow" name="BankManager" value="1" >
+                        </div>
+                        <div class="progressStage">
+                            <div>
+                                <label for="male">Mail Unit</label>
+                            </div>
+                            <input type="checkbox" id="MailUnitShow" name="MailUnit" value="1" >
+                        </div>
+                    </form>
+                </div>
+
+                <!--        province office-->
+
+                <div class="progressContainer" id="province">
+                    <form> <!--submit allert--> <!--This function not works for this type-->
+                        <h3>Province Office</h3>
+                        <div class="progressStage">
+                            <div>
+                                <label for="male">Credit Officer</label>
+                            </div>
+                            <input type="checkbox" id="CreditOfficerProvinceShow" name="CreditOfficeProvince" value="1"
+                                >
+                        </div>
+                        <div class="progressStage">
+                            <div>
+                                <label for="male">Area Manager</label>
+                            </div>
+                            <input type="checkbox" id="BankManagerProvinceShow" name="BankManagerProvince" value="1"
+                                >
+                        </div>
+                        <div class="progressStage">
+                            <div>
+                                <label for="male">Assistant General Manager</label>
+                            </div>
+                            <input type="checkbox" id="AssistantGeneralProvinceShow" name="AssistantGeneralProvince"
+                                value="1" >
+                        </div>
+                        <div class="progressStage">
+                            <div>
+                                <label for="male">Mail Unit</label>
+                            </div>
+                            <input type="checkbox" id="MailUnitProvinceShow" name="MailUnitProvince" value="1" >
+                        </div>
+                    </form>
+                </div>
+
+                <!--  Head Officer   -->
+
+                <div class="progressContainer" id="HeadOffice">
+
+                    <form> <!--submit allert--> <!--This function not works for this type-->
+                        <h3>Head Office</h3>
+                        <div class="progressStage">
+                            <div>
+                                <label for="male">Branch Credit Unit</label>
+                            </div>
+                            <input type="checkbox" id="BranchCreditHeadShow" name="BranchCreditHead" value="1" >
+                        </div>
+                        <div class="progressStage">
+                            <div>
+                                <label for="male">Credit Officer</label>
+                            </div>
+                            <input type="checkbox" id="CreditOfficerHeadShow" name="CreditOfficerHead" value="1"
+                                >
+                        </div>
+                        <div class="progressStage">
+                            <div>
+                                <label for="male">Assistant General Manager</label>
+                            </div>
+                            <input type="checkbox" id="AssistantGeneralHeadShow" name="AssistantGeneralHead" value="1"
+                                >
+                        </div>
+                        <div class="progressStage">
+                            <div>
+                                <label for="male">Divisional General Manager</label>
+                            </div>
+                            <input type="checkbox" id="DivisionalGeneralShow" name="DivisionalGeneral" value="1"
+                                >
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <div class="submit_button main">
+            <form> <!--submit allert-->
+                <button type="submit" onclick="updateloan(); updatebpprocess(); updatePPprocess(); updateHPprocess();">Update Details</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="copyright">
+            <p>Copyright © 2024–2025 Bank Loan Tracking System All rights reserved </p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+<script src="js/adminloging.js"></script>
+</body>
+
+
+</html>
