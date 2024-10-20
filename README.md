@@ -16,4 +16,6 @@ In this project; We used
    Admin panel -- bank1@gmail.com   Password -- bank1
    Gser panel -- bank2@gmail.com    password -- vbank1
 
-2.    
+2. Setup Database connect to ballerina.
+				https://github.com/user-attachments/assets/48107c6f-c41b-4a60-92e2-4841f53e3539
+   
