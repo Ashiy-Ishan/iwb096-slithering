@@ -17,5 +17,12 @@ In this project; We used
    Gser panel -- bank2@gmail.com    password -- vbank1
 
 2. Setup Database connect to ballerina.
-				https://github.com/user-attachments/assets/48107c6f-c41b-4a60-92e2-4841f53e3539
-   
+[https://github.com/user-attachments/assets/48107c6f-c41b-4a60-92e2-4841f53e3539](https://github.com/Ashiy-Ishan/iwb096-slithering/issues/1#issuecomment-2424905454)
+
+
+Make your host, user and password in ballerina code file, otherwise it not connect to database.
+after that connect sql file using HEIDISQL or SQL workbench.
+
+3. After the connect sql into backend ballerina, Run ballerina file use vscode.
+4. Open Login.html file and click live server button in under the vscode.
+   https://github.com/Ashiy-Ishan/iwb096-slithering/issues/1#issuecomment-2424908071
